@@ -1,30 +1,28 @@
 /**
- * Sample React Native Desktop App
- * https://github.com/ptmt/react-native-desktop
- */
- import React from 'react';
- import ReactNative from 'react-native-desktop';
- const {
-   AppRegistry,
-   StyleSheet,
-   Text,
-   View,
- } = ReactNative;
+* Sample React Native Desktop App
+* https://github.com/ptmt/react-native-desktop
+*/
+import React from 'react';
+import ReactNative from 'react-native-desktop';
+
+const {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View,
+} = ReactNative;
 
 const Bram = React.createClass({
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native Desktop!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.osx.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Or use Developer Menu
-        </Text>
+        <View style={styles.menu}>
+        </View>
+
+        <View style={styles.content}>
+          <View style={styles.left} />
+          <View style={styles.right} />
+        </View>
       </View>
     );
   }
@@ -34,19 +32,33 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    //alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    flexDirection: 'column'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+
+  menu: {
+    flex: 0,
+    height: 50,
+    backgroundColor: 'orange'
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+
+  content: {
+    flex: 1,
+    backgroundColor: 'pink',
+    flexDirection: 'row'
   },
+  
+  left: {
+    flex: 0,
+    width: 200,
+    backgroundColor: 'blue'
+  },
+
+  right: {
+    flex: 1,
+    backgroundColor: 'red'
+  }
 });
 
 AppRegistry.registerComponent('Bram', () => Bram);
