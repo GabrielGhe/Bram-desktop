@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
 
   add: {
     position: 'absolute',
-    height: 50,
+    height: 30,
     left: 0,
     right: 0,
     bottom: 0,

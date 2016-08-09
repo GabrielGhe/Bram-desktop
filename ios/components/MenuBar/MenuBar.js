@@ -10,7 +10,9 @@ const {
 const MenuBar = React.createClass({
   render() {
     return (
-      <View style={styles.menu}>
+      <View style={styles.menuBar}>
+        <View style={styles.notification} />
+        <View style={styles.menu} />
       </View>
     )
   }
@@ -18,6 +20,15 @@ const MenuBar = React.createClass({
 
 
 const styles = StyleSheet.create({
+  menuBar: {
+    flexDirection: 'column'
+  },
+
+  notification: {
+    flex: 0,
+    height: 20,
+  },
+
   menu: {
     flex: 0,
     height: 50,
