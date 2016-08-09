@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactNative from 'react-native-desktop';
 
+import DeckList from '../DeckList';
+
 const {
   StyleSheet,
   View,
@@ -11,7 +13,7 @@ const DetailView = React.createClass({
   render() {
     return (
       <View style={styles.content}>
-        <View style={styles.left} />
+        <DeckList />
         <View style={styles.right} />
       </View>
     )
@@ -26,12 +28,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   
-  left: {
-    flex: 0,
-    width: 200,
-    backgroundColor: 'blue'
-  },
-
   right: {
     flex: 1,
     backgroundColor: 'red'

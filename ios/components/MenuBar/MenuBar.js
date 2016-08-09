@@ -7,7 +7,7 @@ const {
 } = ReactNative;
 
 
-const DeckList = React.createClass({
+const MenuBar = React.createClass({
   render() {
     return (
       <View style={styles.menu}>
@@ -25,4 +25,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default DeckList;
+export default MenuBar;
