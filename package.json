@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native-desktop/local-cli/cli.js start"
+    "start": "node node_modules/react-native-macos/local-cli/cli.js start"
   },
   "dependencies": {
-    "react": "^15.1.0-alpha.1",
-    "react-native-desktop": "^0.8.7"
+    "react": "^15.2.1",
+    "react-native-macos": "^0.10.0-rc"
   }
 }
