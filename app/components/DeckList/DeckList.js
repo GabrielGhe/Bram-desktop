@@ -3,7 +3,7 @@ import ReactNative from 'react-native-macos';
 
 const {
   StyleSheet,
-  View,
+  View
 } = ReactNative;
 
 

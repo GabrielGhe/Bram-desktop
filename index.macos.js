@@ -3,7 +3,7 @@ import React from 'react';
 import ReactNative from 'react-native-macos';
 
 import MenuBar from './app/components/MenuBar';
-import DetailView from './app/components/DetailView';
+import ContentView from './app/components/ContentView';
 
 const {
   AppRegistry,
@@ -16,7 +16,7 @@ const Bram = React.createClass({
     return (
       <View style={styles.container}>
         <MenuBar />
-        <DetailView />
+        <ContentView />
       </View>
     );
   }
