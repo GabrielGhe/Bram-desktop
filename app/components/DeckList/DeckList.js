@@ -3,7 +3,8 @@ import ReactNative from 'react-native-macos';
 
 const {
   StyleSheet,
-  View
+  View,
+  Button
 } = ReactNative;
 
 
@@ -11,8 +12,7 @@ const DeckList = React.createClass({
   render() {
     return (
       <View style={styles.left}>
-        <View style={styles.search} />
-        <View style={styles.add} />
+        <Button bezelStyle='thickerSquare' style={styles.add} title='+' />
       </View>
     )
   }
@@ -22,24 +22,17 @@ const DeckList = React.createClass({
 const styles = StyleSheet.create({
   left: {
     flex: 0,
-    width: 250,
+    width: 200,
     flexDirection: 'column',
-    backgroundColor: 'blue'
-  },
-
-  search: {
-    flex: 0,
-    height: 50,
-    backgroundColor: 'green'
+    backgroundColor: '#efefef'
   },
 
   add: {
     position: 'absolute',
-    height: 30,
     left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: 'purple'
+    height: 30,
+    width: 200,
+    bottom: 0
   }
 });
 
