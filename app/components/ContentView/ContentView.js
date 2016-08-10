@@ -25,7 +25,6 @@ const ContentView = React.createClass({
 const styles = StyleSheet.create({
   content: {
     flex: 1,
-    //backgroundColor: 'pink',
     flexDirection: 'row'
   }
 });
