@@ -4,35 +4,58 @@ import ReactNative from 'react-native-macos';
 const {
   StyleSheet,
   View,
-  Button
+  Button,
+  TouchableHighlight,
+  ListView
 } = ReactNative;
 
-
 const DeckList = React.createClass({
+  getInitialState: function() {
+    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    return {
+      dataSource: ds.cloneWithRows(this._genRows({})),
+    };
+  },
+
   render() {
     return (
-      <View style={styles.left}>
-        <Button bezelStyle='thickerSquare' style={styles.add} title='+' />
-      </View>
+      <ListView
+        dataSource={this.state.dataSource}
+        renderRow={this._renderRow}
+        renderSeparator={this._renderSeparator}
+      />
     )
-  }
+  },
+
+  _renderRow: function(rowData, sectionID, rowID, highlightRow) {
+    return (
+      <View style={styles.row} />
+    );
+  },
+
+  _renderSeparator: function(sectionID, rowID, adjacentRowHighlighted) {
+    return (
+      <View style={styles.separator} />
+    );
+  },
+
+  _genRows: function(pressData) {
+    var dataBlob = ['one', 'two'];
+    return dataBlob;
+  },
 });
 
 
 const styles = StyleSheet.create({
-  left: {
-    flex: 0,
-    width: 200,
-    flexDirection: 'column',
-    backgroundColor: '#efefef'
+  row: {
+    flex: 1,
+    height: 50,
+    backgroundColor: 'blue'
   },
 
-  add: {
-    position: 'absolute',
-    left: 0,
-    height: 30,
-    width: 200,
-    bottom: 0
+  separator: {
+    flex: 1,
+    height: 10
   }
 });
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactNative from 'react-native-macos';
 
-import DeckList from '../DeckList';
+import LeftPanel from '../LeftPanel';
 import DetailView from '../DetailView';
 
 const {
@@ -14,7 +14,7 @@ const ContentView = React.createClass({
   render() {
     return (
       <View style={styles.content}>
-        <DeckList />
+        <LeftPanel />
         <DetailView />
       </View>
     )
