@@ -6,6 +6,7 @@ const {
   View,
   Button,
   TouchableHighlight,
+  Text,
   ListView
 } = ReactNative;
 
@@ -28,8 +29,11 @@ const DeckList = React.createClass({
   },
 
   _renderRow: function(rowData, sectionID, rowID, highlightRow) {
+    console.log("rowData:" + rowData + " sectionID:" + sectionID + " rowID:" + rowID + " highlightRow:" + highlightRow);
     return (
-      <View style={styles.row} />
+      <View style={styles.row}>
+        <Text>{rowData}</Text>
+      </View>
     );
   },
 
