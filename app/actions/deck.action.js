@@ -1,4 +1,4 @@
-export const ACTIONS = {
+export const Actions = {
   ADD_DECK: 'ADD_DECK',
   REMOVE_DECK: 'REMOVE_DECK',
   UPDATE_DECK: 'UPDATE_DECK'
@@ -7,21 +7,21 @@ export const ACTIONS = {
 
 export function addDeck(DeckChanges) {
   return {
-    type: ACTIONS.ADD_DECK,
+    type: Actions.ADD_DECK,
     payload: deckChanges
   };
 }
 
 export function updateDeck(deckChanges) {
   return {
-    type: ACTIONS.UPDATE_DECK,
+    type: Actions.UPDATE_DECK,
     payload: deckChanges
   };
 }
 
 export function removeDeck(deckChanges) {
   return {
-    type: ACTIONS.gREMOVE_DECK,
+    type: Actions.gREMOVE_DECK,
     payload: deckChanges
   };
 }

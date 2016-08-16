@@ -28,10 +28,10 @@ const DeckList = React.createClass({
     )
   },
 
-  _renderRow: function(rowData, sectionID, rowID, highlightRow) {
+  _renderRow: function(deck, sectionID, rowID, highlightRow) {
     return (
       <View style={styles.row}>
-        <Text>{rowData}</Text>
+        <Text>{deck.text}</Text>
       </View>
     );
   },
@@ -43,7 +43,7 @@ const DeckList = React.createClass({
   },
 
   _genRows: function(pressData) {
-    var dataBlob = ['one', 'two'];
+    var dataBlob = [{text: 'one'}, {text: 'two'}];
     return dataBlob;
   },
 });

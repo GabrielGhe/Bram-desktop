@@ -1,4 +1,4 @@
-export const ACTIONS = {
+export const Actions = {
   ADD_CARD: 'ADD_CARD',
   REMOVE_CARD: 'REMOVE_CARD',
   UPDATE_CARD: 'UPDATE_CARD'
@@ -6,21 +6,21 @@ export const ACTIONS = {
 
 export function addCard(cardChanges) {
   return {
-    type: ACTIONS.ADD_CARD,
+    type: Actions.ADD_CARD,
     payload: cardChanges
   };
 }
 
 export function updateCard(cardChanges) {
   return {
-    type: ACTIONS.UPDATE_CARD,
+    type: Actions.UPDATE_CARD,
     payload: cardChanges
   };
 }
 
 export function removeCard(cardChanges) {
   return {
-    type: ACTIONS.REMOVE_CARD,
+    type: Actions.REMOVE_CARD,
     payload: cardChanges
   };
 }
