@@ -1,4 +1,4 @@
-import Actions from '../actions/deck.action';
+import Actions from '../actions/deck';
 
 const initialState = {
   decks: []
@@ -38,7 +38,7 @@ function updateDeck(state, action) {
 }
 
 
-function reduceDeck(state = initialState, action) {
+export default function reduceDeck(state = initialState, action) {
   switch (action.type) {
     case Actions.ADD_DECK:
       return addDeck(state, action);
