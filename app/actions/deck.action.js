@@ -21,7 +21,7 @@ export function updateDeck(deckChanges) {
 
 export function removeDeck(deckChanges) {
   return {
-    type: Actions.gREMOVE_DECK,
+    type: Actions.REMOVE_DECK,
     payload: deckChanges
   };
 }
