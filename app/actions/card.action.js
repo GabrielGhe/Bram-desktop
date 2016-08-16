@@ -1,24 +1,26 @@
-const ADD_CARD = 'ADD_CARD'
-const REMOVE_CARD = 'REMOVE_CARD'
-const UPDATE_CARD = 'UPDATE_CARD'
+export const ACTIONS = {
+  ADD_CARD: 'ADD_CARD',
+  REMOVE_CARD: 'REMOVE_CARD',
+  UPDATE_CARD: 'UPDATE_CARD'
+};
 
 export function addCard(cardChanges) {
   return {
-    type: ADD_CARD,
+    type: ACTIONS.ADD_CARD,
     payload: cardChanges
   };
 }
 
 export function updateCard(cardChanges) {
   return {
-    type: UPDATE_CARD,
+    type: ACTIONS.UPDATE_CARD,
     payload: cardChanges
   };
 }
 
 export function removeCard(cardChanges) {
   return {
-    type: REMOVE_CARD,
+    type: ACTIONS.REMOVE_CARD,
     payload: cardChanges
   };
 }

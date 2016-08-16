@@ -1,24 +1,27 @@
-const ADD_DECK = 'ADD_DECK'
-const REMOVE_DECK = 'REMOVE_DECK'
-const UPDATE_DECK = 'UPDATE_DECK'
+export const ACTIONS = {
+  ADD_DECK: 'ADD_DECK',
+  REMOVE_DECK: 'REMOVE_DECK',
+  UPDATE_DECK: 'UPDATE_DECK'
+};
+
 
 export function addDeck(DeckChanges) {
   return {
-    type: ADD_DECK,
+    type: ACTIONS.ADD_DECK,
     payload: deckChanges
   };
 }
 
 export function updateDeck(deckChanges) {
   return {
-    type: UPDATE_DECK,
+    type: ACTIONS.UPDATE_DECK,
     payload: deckChanges
   };
 }
 
 export function removeDeck(deckChanges) {
   return {
-    type: REMOVE_DECK,
+    type: ACTIONS.gREMOVE_DECK,
     payload: deckChanges
   };
 }
